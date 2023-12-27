@@ -13,6 +13,7 @@ const Game = () => {
     setisXTurn(!isXTurn)
     console.log(copyState)
     }
+    //Winner Check
     const checkWinner=()=>{
        
         const Logic=[
@@ -63,7 +64,10 @@ const Game = () => {
       <Square onClick={()=> handleClick(7)} value={state[7]}/>
       <Square onClick={()=> handleClick(8)} value={state[8]}/>
         </div>
-        </>}</div>
+        <div className="flex flex-col align-center justify-center"><button onClick={()=>{handleReset()}}  className="w-10 text-white font-bold rounded-md p-2 m-3 bg-purple-800">↻</button></div>
+ </>}
+      </div>
+       
  );
     };
 
